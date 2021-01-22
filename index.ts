@@ -4,7 +4,7 @@ const $form = document.querySelector("#form");
 
 $form.addEventListener("submit", (e) => {
   e.preventDefault();
-  
+
   const countryCode = $countryCodeField.value;
   const phoneNumber = $phoneNumberField.value;
 
@@ -19,14 +19,12 @@ $form.addEventListener("submit", (e) => {
     ""
   );
 
-  console.log(fullContactNumber);
-  const url = `https://web.whatsapp.com/send?phone=${countryCode}${phoneNumber}`;
-  window.open(url, "_blank");
+  const webUrl = `https://web.whatsapp.com/send?phone=${countryCode}${phoneNumber}`;
+  const mobileUrl = `https://wa.me/${countryCode}${phoneNumber}`;
+  window.open(mobileUrl, "_blank");
 });
 
 window.addEventListener("load", () => {
-  console.log("aer");
-
   // Set saved country code
   $countryCodeField.value = localStorage.getItem("country-code");
 });
