@@ -30,7 +30,7 @@
     </header>
 
     <main class="mt-8">
-      <form>
+      <form id="form">
         <ul class="space-y-6">
           <section class="flex space-x-4">
             <li class="w-2/6">
@@ -39,6 +39,7 @@
                 id="code"
                 class="block w-full p-2 bg-gray-100 border-2 border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-300"
                 type="tel"
+                required
               />
             </li>
             <li class="flex-grow">
@@ -47,6 +48,7 @@
                 id="phone"
                 class="block w-full p-2 bg-gray-100 border-2 border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-300"
                 type="tel"
+                required
               />
             </li>
           </section>
@@ -54,7 +56,6 @@
           <section class="flex">
             <button
               id="chat"
-              type="button"
               class="px-6 py-3 font-semibold text-gray-100 bg-green-500 rounded-md"
             >
               Chat
