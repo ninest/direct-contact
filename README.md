@@ -19,7 +19,7 @@ yarn dev
 Build the web app with
 
 ```bash
-# ...
+yarn build
 ```
 
 ## License

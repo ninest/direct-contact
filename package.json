@@ -4,16 +4,17 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "snowpack dev",
-    "build": "snowpack build"
+    "clean": "rimraf ./public & rimraf ./dist & rimraf ./.cache",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "devDependencies": {
-    "@snowpack/plugin-postcss": "^1.1.0",
-    "autoprefixer": "^10.2.3",
-    "postcss": "^8.2.4",
-    "postcss-cli": "^8.3.1",
+    "@tailwindcss/postcss7-compat": "^2.0.2",
+    "autoprefixer": "^9",
+    "cssnano": "^4.1.10",
+    "postcss": "^7",
     "prettier": "^2.2.1",
-    "snowpack": "^3.0.11",
-    "tailwindcss": "^2.0.2"
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "typescript": "^4.1.3"
   }
 }
