@@ -10,7 +10,7 @@ Clone the repository and install all dependencies:
 yarn
 ```
 
-Start the Snowpack development server with
+Start the development server with
 
 ```bash
 yarn dev
@@ -21,6 +21,22 @@ Build the web app with
 ```bash
 yarn build
 ```
+
+### Icons
+
+#### Splash screens
+
+```bash
+pwa-asset-generator ./ios.png ./ios-splash -h -b "#34D399"
+```
+
+#### iOS, Android, and favicon
+
+```bash
+pwa-asset-generator ./android.png ./icons -c -e -o false -f
+```
+
+#### Icons
 
 ## License
 
