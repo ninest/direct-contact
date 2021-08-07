@@ -169,22 +169,24 @@
     <main class="mt-8">
       <form id="form">
         <ul class="space-y-6">
-          <section class="flex space-x-4">
-            <li class="w-2/6">
-              <label class="block font-medium" for="code">Country code</label>
+          <section class="space-y-4">
+            <li class="">
+              <label class="form-label" for="code">Country code</label>
               <input
                 id="code"
-                class="block w-full p-2 bg-gray-100 border-2 border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-300"
+                class="form-field"
                 type="tel"
+                placeholder="+12"
                 required
               />
             </li>
-            <li class="flex-grow">
-              <label class="block font-medium" for="phone">Phone number</label>
+            <li class="">
+              <label class="form-label" for="phone">Phone number</label>
               <input
                 id="phone"
-                class="block w-full p-2 bg-gray-100 border-2 border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-300"
+                class="form-field"
                 type="tel"
+                placeholder="98765432"
                 required
               />
             </li>
@@ -193,7 +195,7 @@
           <section class="flex">
             <button
               id="chat"
-              class="px-6 py-3 font-semibold text-gray-100 bg-green-400 rounded-md"
+              class="mt-4 w-full px-6 py-3 text-lg font-semibold text-gray-100 bg-green-500 rounded-md transform hover:scale-95 transition-transform"
             >
               Chat
             </button>
