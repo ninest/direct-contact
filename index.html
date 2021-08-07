@@ -204,6 +204,17 @@
       </form>
     </main>
 
+    <script>
+      const SERVICE_WORKER_PATH = "sw.js";
+      if (
+        process.env.NODE_ENV === "production" &&
+        "serviceWorker" in navigator
+      ) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register(SERVICE_WORKER_PATH);
+        });
+      }
+    </script>
     <script src="/index.ts"></script>
   </body>
 </html>
