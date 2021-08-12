@@ -3,11 +3,17 @@
 @tailwind utilities;
 
 @layer components {
+  .form-element {
+    @apply border-4 border-gray-300;
+    @apply rounded-lg;
+    @apply focus-within:border-green-300 focus-within:bg-green-50;
+
+  }
   .form-label {
-    @apply block text-lg mb-2 font-bold;
+    @apply block px-4 py-2 font-bold text-gray-700;
   }
   .form-field {
-    @apply block w-full p-4 bg-gray-100 border-4 border-gray-300 rounded-lg text-lg;
-    @apply focus:outline-none focus:border-green-300 focus:bg-green-50;
+    @apply block w-full p-4 text-xl bg-transparent;
+    @apply focus:outline-none
   }
 }

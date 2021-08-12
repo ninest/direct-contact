@@ -170,22 +170,24 @@
     <main class="mt-8">
       <form id="form">
         <ul class="space-y-6">
-          <section class="space-y-4">
-            <li class="">
-              <label class="form-label" for="code">Country code</label>
+          <section class="space-y-6">
+            <li class="form-element">
+              <label for="code" class="form-label" for="code">Country code</label>
               <input
                 id="code"
-                class="form-field"
+                name="code"
+                class="form-field font-mono"
                 type="tel"
                 placeholder="+12"
                 required
               />
             </li>
-            <li class="">
-              <label class="form-label" for="phone">Phone number</label>
+            <li class="form-element">
+              <label for="phone" class="form-label" for="phone">Phone number</label>
               <input
                 id="phone"
-                class="form-field"
+                name="phone"
+                class="form-field font-mono"
                 type="tel"
                 placeholder="98765432"
                 required
