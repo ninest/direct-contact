@@ -27,13 +27,16 @@ yarn build
 #### Splash screens
 
 ```bash
-pwa-asset-generator ./ios.png ./ios-splash -h -b "#34D399"
+pwa-asset-generator ./ios.png ./ios-splash ---splash-only --background  "#34D399"
 ```
 
 #### iOS, Android, and favicon
 
+First generate all icons + favicons with transparent background, then override icons only. This is required because there is not `favicon-only` flag.
+
 ```bash
-pwa-asset-generator ./android.png ./icons -c -e -o false -f
+pwa-asset-generator ./android.png ./icons --icon-only --maskable --opaque false --favicon
+pwa-asset-generator ./android.png ./icons --icon-only --maskable --opaque true
 ```
 
 #### Icons
