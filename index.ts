@@ -1,5 +1,6 @@
 const $countryCodeField: HTMLInputElement = document.querySelector("#code");
 const $phoneNumberField: HTMLInputElement = document.querySelector("#phone");
+const $messageField: HTMLInputElement = document.querySelector("#message");
 const $form = document.querySelector("#form");
 
 $form.addEventListener("submit", (e) => {
@@ -7,6 +8,8 @@ $form.addEventListener("submit", (e) => {
 
   const countryCode = $countryCodeField.value;
   const phoneNumber = $phoneNumberField.value;
+  const message = $messageField.value;
+
 
   // Both are required
   if (!countryCode || !phoneNumber) return;
