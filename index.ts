@@ -10,6 +10,9 @@ $form.addEventListener("submit", (e) => {
   const phoneNumber = $phoneNumberField.value;
   const message = $messageField.value;
 
+  // Converted normal string to URL-encoded string
+  const urlValidMessage: string = encodeURIComponent(message);
+
 
   // Both are required
   if (!countryCode || !phoneNumber) return;
@@ -22,8 +25,8 @@ $form.addEventListener("submit", (e) => {
     ""
   );
 
-  const webUrl = `https://web.whatsapp.com/send?phone=${countryCode}${phoneNumber}`;
-  const mobileUrl = `https://wa.me/${countryCode}${phoneNumber}`;
+  const webUrl = `https://web.whatsapp.com/send?phone=${countryCode}${phoneNumber}/?text=${urlValidMessage}`;
+  const mobileUrl = `https://wa.me/${countryCode}${phoneNumber}/?text=${urlValidMessage}`;
   window.open(mobileUrl, "_blank");
 });
 
