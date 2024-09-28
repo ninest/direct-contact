@@ -1,5 +1,6 @@
 const $countryCodeField: HTMLInputElement = document.querySelector("#code");
 const $phoneNumberField: HTMLInputElement = document.querySelector("#phone");
+const $messageField: HTMLInputElement = document.querySelector("#message");
 const $form = document.querySelector("#form");
 
 $form.addEventListener("submit", (e) => {
@@ -7,6 +8,9 @@ $form.addEventListener("submit", (e) => {
 
   const countryCode = $countryCodeField.value;
   const phoneNumber = $phoneNumberField.value;
+  const message = $messageField.value;
+
+  const urlValidMessage: string = encodeURIComponent(message);
 
   // Both are required
   if (!countryCode || !phoneNumber) return;
@@ -19,8 +23,8 @@ $form.addEventListener("submit", (e) => {
     ""
   );
 
-  const webUrl = `https://web.whatsapp.com/send?phone=${countryCode}${phoneNumber}`;
-  const mobileUrl = `https://wa.me/${countryCode}${phoneNumber}`;
+  const webUrl = `https://web.whatsapp.com/send?phone=${countryCode}${phoneNumber}/?text=${urlValidMessage}`;
+  const mobileUrl = `https://wa.me/${countryCode}${phoneNumber}/?text=${urlValidMessage}`;
   window.open(mobileUrl, "_blank");
 });
 
